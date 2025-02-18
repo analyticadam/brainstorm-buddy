@@ -1,6 +1,6 @@
 import { useState } from "react"; // Import React's useState hook
 import { generateIdeas } from "./api"; // Import API function
-import "./styles/App.css"; // Import external CSS file
+import "../src/styles/App.css"; // Import external CSS file
 
 const App = () => {
 	const [topic, setTopic] = useState(""); // Stores the user-inputted topic

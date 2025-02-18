@@ -1,36 +1,61 @@
 /* Global page styling */
 body {
-	font-family: Arial, sans-serif;
+	font-family: "Arial", sans-serif;
 	text-align: center;
 	padding: 2rem;
-	background-color: #f9f9f9;
+	background-color: #f4f7fc;
+	margin: 0;
 }
 
 /* Container for the app */
 .container {
 	max-width: 600px;
+	width: 90%;
 	margin: auto;
 	padding: 20px;
 	background: white;
 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed; /* ✅ Fixes centering */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
-/* Input field styling */
+/* Input and dropdown */
 input,
 select {
-	padding: 10px;
-	margin: 10px;
+	padding: 12px;
+	margin: 10px 0;
 	width: 90%;
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	font-size: 16px;
+	outline: none;
+	transition: 0.2s ease-in-out;
+	background-color: white !important; /* ✅ Forces white background */
+	color: black !important; /* ✅ Ensures text is readable */
 }
 
-/* Button styling */
+/* Fix placeholder color for better visibility */
+input::placeholder {
+	color: #888;
+}
+
+input:focus,
+select:focus {
+	border-color: #007bff;
+}
+
+/* Button styles */
 button {
 	padding: 12px 20px;
-	margin: 10px;
+	margin: 10px 0;
 	background-color: #007bff;
 	color: white;
 	border: none;
@@ -55,18 +80,20 @@ button:hover {
 .idea-output {
 	margin-top: 20px;
 	padding: 15px;
-	background: #f4f4f4;
+	background: #f8f9fa;
 	border-radius: 5px;
 	font-size: 16px;
 	line-height: 1.6;
 	text-align: left;
 	white-space: pre-wrap;
+	border-left: 4px solid #007bff;
+	font-weight: bold;
 }
 
 /* Copy button */
 .copy-button {
 	margin-top: 10px;
-	padding: 8px 12px;
+	padding: 10px 15px;
 	background-color: #28a745;
 	color: white;
 	border: none;
@@ -83,6 +110,9 @@ button:hover {
 .history-container {
 	margin-top: 20px;
 	text-align: left;
+	background: white;
+	padding: 10px;
+	border-radius: 5px;
 }
 
 .history-title {
@@ -97,4 +127,11 @@ button:hover {
 	border-radius: 5px;
 	margin-bottom: 8px;
 	font-size: 14px;
+	border-left: 3px solid #6c757d;
+}
+
+/* ✅ Override global dark mode settings */
+:root {
+	color: #213547 !important;
+	background-color: #ffffff !important;
 }
