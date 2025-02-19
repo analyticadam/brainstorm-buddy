@@ -1,6 +1,6 @@
 :root {
-	color: #213547 !important;
-	background-color: #ffffff !important;
+	color: #213547;
+	background-color: #f4f4f4 !important; /* ✅ Light gray background */
 }
 
 a {
@@ -15,9 +15,12 @@ a:hover {
 body {
 	margin: 0;
 	display: flex;
-	place-items: center;
+	justify-content: center;
+	align-items: center;
 	min-width: 320px;
 	min-height: 100vh;
+	background-color: #f4f4f4; /* ✅ Softer background */
+	color: #333;
 }
 
 h1 {
@@ -32,13 +35,16 @@ button {
 	font-size: 1em;
 	font-weight: 500;
 	font-family: inherit;
-	background-color: #1a1a1a;
+	background-color: #007bff; /* ✅ Brighter button color */
+	color: white; /* ✅ Ensures text contrast */
 	cursor: pointer;
-	transition: border-color 0.25s;
+	transition: background-color 0.3s, transform 0.2s;
 }
 button:hover {
-	border-color: #646cff;
+	background-color: #0056b3;
+	transform: scale(1.05);
 }
+
 button:focus,
 button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
